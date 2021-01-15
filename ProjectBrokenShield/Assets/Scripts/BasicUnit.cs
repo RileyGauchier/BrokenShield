@@ -2,17 +2,19 @@
 
 public class BasicUnit : MonoBehaviour
 {
-    [SerializeField] UnitStats unitStats;
+    [SerializeField] private UnitStats unitStats;
+
+    private int health;
 
     private void Awake()
     {
-        unitStats.health = unitStats.startingHealth;
+        health = unitStats.startingHealth;
     }
 
     public void TakeDamage(int amount)
     {
-        unitStats.health -= amount;
-        if(unitStats.health <= 0)
+        health -= amount;
+        if(health <= 0)
         {
             Die();
         }

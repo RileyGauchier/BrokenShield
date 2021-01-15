@@ -8,7 +8,6 @@ public class UnitStats : ScriptableObject
 
     public int moveAmount;
     public int startingHealth;
-    public int health;
     public int armor;
     public int strength;
 }
